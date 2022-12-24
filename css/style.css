@@ -22,12 +22,12 @@
   padding-bottom:  4em; */
 }
 .circle{
-  margin:3rem auto;
+  margin:2rem auto;
   background-color: red;
   width: 100px;
   height: 100px;
   border: 2px solid yellow;
   border-radius: 50px;
-  outline: 2px solid blue;
-  outline: offset o 0.5em; ;
+  outline: 2px solid rgb(114, 235, 66);
+  outline-offset: -5px; 
 }
