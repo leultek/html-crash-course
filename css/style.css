@@ -1,24 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 body {
-  padding: 10%;
+  padding: 5% 10%;
   font-size: 2rem;
   font-family: "Roboto", sans-serif;
 }
-
-a {
-  color: hsl(240, 100%, 50%);
+ol {
+  list-style-type: none;
+  padding: 0;
 }
-a:visited {
-  color: purple;
+ul {
+  list-style-type: square;
+  text-align: center;
+  list-style-position: inside;
+  color: chartreuse;
+  line-height: 1.6;
+  /* list-style-image: url("../img/checkmark.jpg");
+  list-style: square url("../img/checkmark.jpg")
+  inside; */
 }
-a:hover,
-a:focus {
-  color: hsl(180, 100%, 50%,0.8);
-  background:yellow
-}
-a:active {
+ul li:nth-child(2) {
   color: red;
 }
+ul ::marker {
+  color: red;
+  font-family: fantasy;
+  font-size: 1em;
+  content: "only one 100 birr>>";
+}
+
 /* 
  */
 /* input,button{
