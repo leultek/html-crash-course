@@ -4,35 +4,30 @@ body{
   font-size: 1.5rem;
   font-family: "Roboto", sans-serif;
 }
-.block{
-  width: 30vw;
-  height: 30vw;
-  background-color:grey;
-  color: white;
-  padding: 1rem;
+.column{
+  /* column-count: 4;
+  column-width: 250px; */
+  columns: 4 250px;
+  column-rule: 3px solid #333;
+  column-gap: 3rem;
 }
-.left{
-  float: left;
-  margin-right: 1rem;
+.column p{
+  margin-top: 0;
 }
-.right{
-  float: right;
-  margin-left: 1rem;
+/* .column h2{
+  margin-top: 0rem;
+  background-color: #333;
+  color: whitesmoke;
+  break-inside: avoid;
+} */
+.column .quote{
+  margin-top: 2rem;
+  font-size: 3rem;
+  text-align: center;
+  color: #333;
+  column-span: all;
 }
-.clear{
-  clear: both;
+.nowrap{
+  white-space: nowrap;
 }
-section{
-  background-color: yellowgreen;
-  border: 2px solid #333;
-  padding: 1rem;
-  display: flow-root;
-}
-section{
-  background-color: yellowgreen;
-  border: 2px solid #333;
-  padding: 1rem;
-  display: flow-root;
-}
-
-
+  
