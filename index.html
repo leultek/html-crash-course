@@ -4,38 +4,43 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS columns</title>
+    <title>CSS position</title>
     <link rel="stylesheet" href="/css/style.css" type="text/css" />
   </head>
   <body>
-    <section class="column">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab eius
-        voluptatum est beatae amet tempore quisquam? Adipisci dicta dolores
-        obcaecati?
-      </p>
-      <p>
-        Voluptatum recusandae, maxime earum dolorem necessitatibus, maiores
-        possimus ducimus tempora eveniet vitae corrupti a quisquam sit accusamus
-        ipsum ut similique?
-      </p>
-      <p class="quote">&#8223;The best way to predict your future is to create it.&#8221;<span class="nowrap">&#8212;conor macgregor</span></p>
-     <!--  <h2>Next Topic</h2> -->
-      <p>
-        Dolor molestiae accusantium facere culpa voluptas quae optio vel
-        obcaecati, minima ut nobis ipsam autem consectetur aut illum aperiam
-        porro.
-      </p>
-      <p>
-        Deleniti, qui ullam? Eaque nam exercitationem dolores consequuntur
-        blanditiis totam, et voluptates obcaecati maiores, quo excepturi dolorum
-        voluptas voluptatibus necessitatibus.
-      </p>
+    <div class="outer-container">
+      <div class="inner-container">
+        <div class="box absolute">
+          <p>Absolute</p>
+        </div>
+        <div class="box relative">
+          <p>Relative</p>
+        </div>
+        <div class="box fixed">
+          <p>Fixed</p>
+        </div>
+        <div class="box sticky">
+          <p>Sticky</p>
+        </div>
+      </div>
+    </div>
+    <button class="socail">&#128640;</button>
+    <section id="one">
+      <header class="blue">Header One</header>
+      <h2>One</h2>
     </section>
-    <p>
-      Incidunt, repudiandae dignissimos! Placeat nulla rem unde ab fugiat
-      assumenda exercitationem dolorem soluta dolore, quidem numquam quis
-      facilis non excepturi.
-    </p>
+    <section id="two">
+      <header class="red">Header Two</header>
+      <h2>Two</h2>
+    </section>
+    <section id="three">
+      <header class="green">Header Three</header>
+      <h2>Three</h2>
+    </section>
+    <footer>
+      <a href="#one">One</a> |
+      <a href="#two">Two</a> |
+      <a href="#three">Three</a>
+    </footer>
   </body>
 </html>
