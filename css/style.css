@@ -5,89 +5,38 @@
   box-sizing: border-box;
 }
 body{
-  font-size: 1.5rem;
-  font-family: "Roboto", sans-serif;
-  min-height: 200vh;
+  min-height: 100vh;
+  font-family: "Roboto",sans-serif;
+  padding: 20px;
 }
-.outer-container{
-  border: 3px dashed black;
-  width: 75vw;
-  height: 85vh;
-  margin: 40px auto;
-  position: relative;
-}
-.inner-container{
-  border: 2px solid blue;
-  width: 40vw;
-  height: 50vh;
-  margin: 200px auto;
+.container{
+  max-width: 800px;
+  min-height: 400px;
+  margin-inline: auto;
+  border: 3px solid #04883f;
+  display: flex;
+  justify-content:center;
+  gap: 1rem;
+  align-items: center;
+  flex-flow: row-reverse
+  wrap;
+  align-content: space-evenly;
 }
 .box{
-  width: 150px;
-  height: 150px;
+ /*  min-width: 100px; */
+  min-height: 100px;
+  background-color: #053247;
   color: white;
-  padding: 1rem;
+  padding: 0.5rem;
+  font-size: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex: 1 1 250px;
 }
-.absolute{
-  background-color: blue;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  z-index: 1;
-}
-.relative{
-  background-color:rebeccapurple ;
-  position: relative;
-  top: 300px;
-  left: 200px;
-}
-.fixed{
-  background-color: aqua;
-  position: fixed;
-  top: 100px;
-  left: 250px;
-}
-.sticky{
-  background-color: black;
-  position: sticky;
-  top: 0;
-}
-/* ///... Remeber how we ca disappear things in css... /// */
-html{
-  scroll-behavior: smooth;
-}
-section{
-  height: 100vh;
-}
-.blue{background-color: blue;}
-.red{background-color: red;}
-.green{background-color: green;}
-header,footer{
-  color: white;
-  text-align: center;
-  height: 100px;
-}
-header{
-  font-size: 5rem;
-  position: sticky;
-  top: 0;
-}
-footer{
-  background-color: #333;
-  font-size: 3rem;
-  position: sticky;
-  bottom: 0;
-}
-a:visited{
-  color: white;
-}
-.socail{
-  background-color: yellow;
-  color: white;
-  top: 30%;
-  padding: 1rem;
-  font-size: inherit;
-  position: fixed;
-  left: 0;
-  z-index: 1;
+.box:nth-child(2) {
+  flex: 2 2 250px;
+  order: 1;
 }
