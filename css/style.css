@@ -23,6 +23,17 @@ img {
 body {
   font-family: "Roboto" sans-serif;
   min-height: 100vh;
+  /* background-color: aliceblue;
+  background-image: url("../img/pexels-adonyi-gábor-1582043.jpg"),
+  linear-gradient(steelblue, red);
+  background-repeat: no-repeat;
+                    */
+}
+.container{
+  background: url("../img/pexels-mo-eid-9310623.jpg");
+  background-repeat: repeat;
+  background-position: top;
+  background-size: cover;
 }
 .hero {
   border-bottom: 2px solid #000000;
@@ -30,21 +41,28 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 30px;
+  gap: 30px
 }
+
 
 .h1 {
   font-size: 500%;
+  color: aliceblue;
+  text-shadow: 2px 2px 5px black;
+  /* background-color: hsla(0, 0%, 0%, 0.349);
+  padding: 0.25rem;
+  border-radius: 10px; */
 }
 
 .profile-pic-figure {
   width: 35%;
 }
 .profile-pic-figure img {
-  width: 50%;
+  width: 100%;
   height: auto;
   min-width: 100px;
   border: 5px double gray;
+  border-radius: 50%;
 }
 
 .example {
@@ -55,4 +73,13 @@ body {
 .example img {
   width: 25%;
   height: auto;
+}
+.clip{
+  font-weight: 800;
+  font-size: 18rem;
+  text-align: center;
+  background-image: url(../img/sceinic.png);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  color: transparent;
 }
