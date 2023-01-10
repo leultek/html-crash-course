@@ -4,21 +4,59 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <title>Mini projiect: Profile Card</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
   </head>
   <body>
     <header>
-      <h1>Header</h1>
+      <h1>Our Staff</h1>
       <nav>
-        <h2>Nav</h2>
+        <a href="#profile1">Joe</a>
+        <a href="#profile2">Matt</a>
+        <a href="#profile3">Jane</a>
       </nav>
     </header>
     <main>
-      <h2>Main</h2>
+      <article id="profile1" class="card">
+      <figure>
+        <img
+          src="img/pexels-pixabay-220453.jpg"
+          alt="Joe coder"
+          width="300"
+          height="450"
+        />
+        <figcaption>Joe coder</figcaption>
+      </figure>
+      <p><q>I code staff</q></p>
+    </article>
+      <article id="profile2" class="card">
+      <figure>
+        <img
+          src="img/pexels-dziana-hasanbekava-7275385.jpg"
+          alt="Matt Designer"
+          width="300"
+          height="449"
+        />
+        <figcaption>Matt Designer</figcaption>
+      </figure>
+      <p><q>I design staff</q></p>
+    </article>
+      <article id="profile3" class="card">
+      <figure>
+        <img
+          src="img/pexels-anastasia-shuraeva-5704720.jpg"
+          alt="Jane dev rel"
+          width="300"
+          height="450"
+        />
+        <figcaption>Jane <span class="nowrap">dev rel
+        </span></figcaption>
+      </figure>
+      <p><q>I teach staff</q></p>
+    </article>
     </main>
     <footer>
-      <h2>Footer</h2>
+      &copy; Acme Co.
     </footer>
   </body>
 </html>
