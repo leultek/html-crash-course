@@ -33,6 +33,7 @@ footer {
   background-color: steelblue;
   color: whitesmoke;
   text-align: center;
+  z-index: 1;
 }
 header {
   top: 0;
@@ -63,7 +64,12 @@ main {
 footer {
   bottom: 0;
 }
-/* Profile Card */
+
+  content: open-quote;
+  font-size: 3em;
+  position: absolute;
+  top: -0.25em;
+  left: -0.5em; Profile Card 
 .card{
   scroll-margin-top: 8rem;
   width: min(100%,350px);
@@ -75,6 +81,9 @@ footer {
   flex-direction: column;
   align-items: center;
 }
+.card:target{
+  border: 5px double rebeccapurple;
+}
 .card figure{
   display: flex;
   flex-flow: column nowrap;
@@ -83,14 +92,37 @@ footer {
   border: 5px double #333;
   border-radius: 50%;
 }
+.card:nth-child(even){
+  background-color: burlywood;
+}
 .card figcaption{
   font-weight: bolder;
   font-size: 2rem;
   margin: 1rem;
   text-align: center;
 }
+.card figcaption::after{
+  content: "🙌";
+  display: block;
+}
+.card figcaption::first-line{
+  font-size: 3rem;
+}
+.card p {
+  position: relative;
+}
+.card p::before{
+}
+.card p::after{
+  content: close-quote;
+  font-size: 3em;
+  position: absolute;
+  top: -0.25em;
+  right: -0.5em;
+}
 
-/* Small// */
+
+Small//
 @media screen and (min-width: 576px) {
   main{
     justify-content: center;
@@ -105,7 +137,7 @@ footer {
   }
 }
 
-/* Medium// */
+Medium//
 @media screen and (min-width: 768px) {
   nav{
     display: none;
@@ -123,7 +155,7 @@ footer {
     margin-top: 1rem;
   }
 }
-/*Large// */
+Large//
 @media screen and (min-width: 992px) {
   .card{
     width: min(100%,400px);
@@ -132,13 +164,13 @@ footer {
     order: -1;
   }
 }
-/* //xl/ */
+//xl/
 @media screen and (min-width: 1200px) {
   .card{
     width: min(calc(33%-1rem), 500px);
   }
 }
-/* /// */
+///
 @media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
   h1{
     font-size: 1.5rem;
@@ -158,4 +190,4 @@ footer {
     font-size: 1.25rem;
   }
 } 
- 
+  */  
