@@ -13,19 +13,22 @@
   --RADIALCOLOR: #f5f5f5;
   --LIGHTCOLOR: #f5f5f5;
   --DARKCOLOR: #333;
+  --FS-XL: 3rem;
+  --PADDING: 0.5rem;
+
   /* Font */
   --FF: "Roboto" sans-serif;
-  --FS: 1.5rem;
-  --FS-XL: 3rem;
+  --FS-SM: clamp(1.25rem, 2vh, 1.5rem)
+  
  /*  General Style */
- --PADDING: 0.5rem;
+ --PADDING: 0.5em;
  --SHADOWS: 0 6px 5px -5px var(--DARKCOLOR);
  --BORDERS: 2px solid (var(--DARKCOLOR));
  /* SQUARE */
  --SQUARE-BC: papayawhip;
  --SQUARE-SIZE: max(10px,20vw);
 }
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root{
     --BGCOLOR: black;
     --ALTCOLOR: #333;
@@ -66,13 +69,51 @@ nav{
 }
 main{
   flex-grow: 1;
-
+  padding: var(--PADDING);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(100px,
+   300px));
+  gap: min(2vh, 20px);
+  display: flex;
+  justify-content: start;
+  flex-flow: column nowrap;
+  font-size: var(--FS-SM); 
+  
+  
   padding: 10px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-flow: row wrap;
   gap: min(4vw, 15px);
+  font-size: 2rem;
+}
+main section{
+  padding: var(--PADDING);
+  flex-grow: 1;
+}
+main aside{
+  background-color: hsla(0 0% 20% 0.8);
+  color: var(--LIGHTCOLOR);
+  font-size: var(--FS-SM);
+  font-style: italic;
+  padding: var(--PADDING);
+}
+.content{
+  margin-top: 20px;
+}
+.tooltip{
+  border-bottom: 1px solid orange;
+  position: relative;
+}
+.tooltip:hover::before{
+  content: attr(data-tooltip);
+  position: absolute;
+  top: -20px;
+  white-space: nowrap;
+  background-color: var(--DARKCOLOR);
+  padding: var(--PADDING);
+  border-radius: 15px;
 }
 footer{
   bottom: 0;
@@ -83,12 +124,30 @@ footer{
 }
 .square{
   background-color: var(--SQUARE-BC);
-  width:  var(--SQUARE-SIZE);
-  height: var(--SQUARE-SIZE);
+  /* width:  var(--SQUARE-SIZE);
+  height: var(--SQUARE-SIZE); */
   border: var(--BORDERS);
   border-radius: 15px;
   display: grid;
   place-content: center;
   font-size: var(--FS-XL);
   box-shadow: var(--SHADOWS);
+}
+@media screen and (min-width: 576px) {
+  main{
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+  main section{
+    width: calc(70% - 5px);
+  }
+  main aside{
+    width: calc(30% - 5px);
+  }
+}
+a:any-link{
+  color: firebrick;
+}
+a:hover, a:focus{
+  filter: brightness(150%);
 }
