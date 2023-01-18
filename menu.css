@@ -5,6 +5,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+button{
+  font: inherit;
+}
 :root{
     --HEADER-BG-COLOR: #333;
     --HEADER-COLOR: whitesmoke;
@@ -60,13 +63,13 @@ html{
   }
   nav{
     background-color: var(--HEADER-BG-COLOR);
-    display: block;
+    display: none;
     transform-origin: top center;
     animation: showmenu 0.5s ease-in-out forwards;
   }
   :is(header:hover, header:focus-within) .menu-icon {
     background-color: transparent;
-    transform: rotate(720deg);
+    /* transform: rotate(720deg); */
   }
   :is(header:hover, header:focus-within) .menu-icon::before {
     transform: translateX(-20px) rotate(45deg);
